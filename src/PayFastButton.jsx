@@ -70,7 +70,7 @@ export default function PayFastButton() {
       </p>
       <p style={{
         fontSize: 13,
-        color: '#333',
+        color: '#e5f440',
         fontFamily: 'DM Mono, monospace',
         marginBottom: 20,
         lineHeight: 1.7,
