@@ -1,0 +1,15 @@
+<svg width="200" height="48" viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>NetZA</title>
+  <desc>NetZA salary calculator wordmark logo</desc>
+
+  <!-- Icon badge -->
+  <rect width="48" height="48" rx="11" fill="#0a0a0a"/>
+  <text x="7" y="38" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="34" fill="#f0f0f0">N</text>
+  <line x1="6" y1="24" x2="40" y2="24" stroke="#00e87a" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="40,20 48,24 40,28" fill="#00e87a"/>
+
+  <!-- Wordmark -->
+  <text x="60" y="32" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="26" fill="#f0f0f0">Net</text>
+  <text x="109" y="32" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="26" fill="#00e87a">ZA</text>
+
+</svg>
