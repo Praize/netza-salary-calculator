@@ -2,8 +2,9 @@
 // PayFast "Buy me a coffee" component
 //
 // TODO: Replace these two values when you sign up at payfast.io
-const MERCHANT_ID  = '13264418'    // e.g. "10000100"
-const MERCHANT_KEY = 'lvisllsw2aigq'   // e.g. "46f0cd694581a"
+ 
+const MERCHANT_ID = import.meta.env.VITE_PAYFAST_MERCHANT_ID
+const MERCHANT_KEY = import.meta.env.VITE_PAYFAST_MERCHANT_KEY
 // ─────────────────────────────────────────────
 
 const PAYFAST_URL = 'https://www.payfast.co.za/eng/process'
