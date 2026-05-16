@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { calcSalary, formatZAR } from './taxEngine'
 import { useExchangeRates } from './useExchangeRates'
+import './App.css'
 
 import PayFastButton from './PayFastButton'
 
@@ -96,7 +97,7 @@ export default function App() {
 
   return (
     <div style={{
-      minHeight: '100vh',
+      minHeight: '100dvh',
       background: '#0a0a0a',
       display: 'flex',
       flexDirection: 'column',
@@ -137,7 +138,7 @@ export default function App() {
           What's your<br />
           <span style={{ color: '#00e87a' }}>take-home pay?</span>
         </h1>
-        <p style={{ color: '#555', fontSize: 14, lineHeight: 1.6, fontFamily: 'DM Mono, monospace' }}>
+        <p style={{ color: '#555', fontSize: 16, lineHeight: 1.6, fontFamily: 'DM Mono, monospace' }}>
           Foreign offer → ZAR → SARS tax → net pay. One shot.
         </p>
       </header>
@@ -154,6 +155,8 @@ export default function App() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: 8,
         animation: 'fadeUp 0.5s ease 0.1s both',
       }}>
         <div style={{ display: 'flex', gap: 16 }}>
@@ -197,11 +200,12 @@ export default function App() {
                   color: '#00e87a',
                   fontFamily: 'DM Mono, monospace',
                   fontWeight: 500,
-                  fontSize: 14,
+                  fontSize: 16,
                   padding: '14px 10px',
                   cursor: 'pointer',
                   outline: 'none',
                   width: 80,
+                  gap: 10
                 }}
               >
                 {CURRENCIES.map(c => <option key={c} value={c}>{c}</option>)}
@@ -225,6 +229,7 @@ export default function App() {
                 padding: '14px 16px',
                 outline: 'none',
                 transition: 'border-color 0.2s',
+                minWidth: 0,
               }}
               onFocus={e => e.target.style.borderColor = '#00e87a'}
               onBlur={e => e.target.style.borderColor = '#cecece'}
@@ -316,7 +321,7 @@ export default function App() {
             <div style={{ fontSize: 'clamp(32px, 8vw, 52px)', fontWeight: 800, color: '#00e87a', lineHeight: 1, marginBottom: 4 }}>
               {formatZAR(result.net.monthly)}
             </div>
-            <div style={{ fontSize: 14, color: '#00e87a55', fontFamily: 'DM Mono, monospace' }}>
+            <div style={{ fontSize: 16, color: '#00e87a55', fontFamily: 'DM Mono, monospace' }}>
               {formatZAR(result.net.annual)} per year
             </div>
 
@@ -383,7 +388,7 @@ export default function App() {
               paddingTop: 16,
               marginTop: 4,
             }}>
-              <span style={{ color: '#00e87a', fontSize: 14, fontWeight: 700, fontFamily: 'DM Mono, monospace' }}>
+              <span style={{ color: '#00e87a', fontSize: 16, fontWeight: 700, fontFamily: 'DM Mono, monospace' }}>
                 Take-home
               </span>
               <div style={{ textAlign: 'right' }}>
