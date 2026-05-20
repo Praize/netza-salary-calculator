@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { calcSalary, formatZAR } from './taxEngine'
 import { useExchangeRates } from './useExchangeRates'
+import { Analytics } from "@vercel/analytics/react"
 import './App.css'
 
 import PayFastButton from './PayFastButton'
@@ -96,6 +97,7 @@ export default function App() {
   // const sym = CURRENCY_SYMBOLS[currency]
 
   return (
+    
     <div style={{
       minHeight: '100dvh',
       background: '#0a0a0a',
@@ -446,7 +448,7 @@ export default function App() {
         </div>
       )}
     <PayFastButton />
-
+    <Analytics/>
       <footer style={{
         width: '100%',
         maxWidth: 640,
